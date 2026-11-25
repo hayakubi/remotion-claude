@@ -8,6 +8,8 @@ import type { SceneProps } from "./Hourglass";
 const CONFETTI = 24;
 const COLORS = ["#fb493a", "#ffc036", "#fdd15a", "#ffffff", "#ff7a66"];
 const GRAVITY = 1500;
+// Geser seluruh adegan ke bawah agar pita tidak terpotong di tepi atas kanvas.
+const DY = 55;
 
 /**
  * Kado tahun baru (8 detik, loop mulus): kado melompat empat kali dengan
@@ -23,12 +25,12 @@ export const NewYearGift: React.FC<SceneProps> = ({ background, shadow }) => {
   const hop = Math.abs(Math.sin(Math.PI * x));
   const land = Math.pow(1 - hop, 10);
 
-  const boxTf = `translate(0 ${-85 * hop}) ${tf(540, 975, {
+  const boxTf = `translate(0 ${DY - 60 * hop}) ${tf(540, 975, {
     sx: 1 + 0.07 * land - 0.02 * hop,
     sy: 1 - 0.09 * land + 0.03 * hop,
   })}`;
-  const lidTf = `translate(0 ${-60 * hop * hop}) ${tf(540, 540, {
-    rotate: 3 * Math.sin(TAU * x) * hop,
+  const lidTf = `translate(0 ${-18 * hop * hop}) ${tf(540, 540, {
+    rotate: 2 * Math.sin(TAU * x) * hop,
   })}`;
 
   const bow = 7 * Math.sin(TAU * 2 * x);
@@ -40,7 +42,7 @@ export const NewYearGift: React.FC<SceneProps> = ({ background, shadow }) => {
     const dev = (i / (CONFETTI - 1) - 0.5) * 2.2 + (rand(i, 1) - 0.5) * 0.25;
     const speed = 380 + rand(i, 2) * 420;
     const px = 545 + Math.sin(dev) * speed * c;
-    const py = 170 - Math.cos(dev) * speed * c + 0.5 * GRAVITY * c * c;
+    const py = 170 + DY - Math.cos(dev) * speed * c + 0.5 * GRAVITY * c * c;
     const rot = 720 * c * (rand(i, 3) > 0.5 ? 1 : -1) + rand(i, 4) * 180;
     const opacity = clamp01((1 - c) * 3) * clamp01(c * 12);
     const color = COLORS[i % COLORS.length];
@@ -68,7 +70,7 @@ export const NewYearGift: React.FC<SceneProps> = ({ background, shadow }) => {
       background={background}
       ground={
         shadow
-          ? { y: 985, width: 880, scale: 1 - 0.3 * hop, opacity: 1 - 0.5 * hop }
+          ? { y: 985 + DY, width: 880, scale: 1 - 0.3 * hop, opacity: 1 - 0.5 * hop }
           : undefined
       }
     >
