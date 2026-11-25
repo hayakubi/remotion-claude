@@ -1,4 +1,4 @@
-// File ini dibuat otomatis oleh scripts/svg-to-tsx.mjs dari public/svg/NewYearCap.svg. Jangan diedit manual.
+// File ini dibuat otomatis oleh scripts/svg-to-tsx.mjs dari public/svg/animated/NewYearCap.svg. Jangan diedit manual.
 import React from "react";
 
 export const defs = (

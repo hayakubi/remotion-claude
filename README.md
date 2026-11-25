@@ -37,7 +37,8 @@ Panduan spesifikasi dan strategi microstock ada di [docs/microstock.md](docs/mic
 
 ## Struktur
 
-- `public/svg/` — SVG asli
+- `public/svg/animated/` — SVG yang sudah dianimasikan (Hourglass, NewYearCap, NewYearDrink, NewYearGift)
+- `public/svg/pending/` — SVG yang belum dianimasikan (NewYearHat, NewYearMask, NewYearStar, StarGlasses)
 - `src/svg/` — SVG yang sudah diubah jadi komponen per bagian (dibuat otomatis)
 - `src/animations/` — animasi per objek
 - `src/components/Stage.tsx` — kanvas, latar, dan bayangan
@@ -47,6 +48,6 @@ Panduan spesifikasi dan strategi microstock ada di [docs/microstock.md](docs/mic
 
 ## Menambah objek baru
 
-1. Taruh SVG di `public/svg/` (beri `id` pada tiap bagian yang mau dianimasikan, mis. `tutup-atas`).
+1. Pindahkan SVG dari `public/svg/pending/` ke `public/svg/animated/` (pastikan tiap bagian punya `id` pada tiap bagian yang mau dianimasikan, mis. `tutup-atas`).
 2. `npm run svg:generate`
 3. Buat komponen animasi di `src/animations/` dan daftarkan di `src/Root.tsx` dan `scripts/render-all.mjs`.

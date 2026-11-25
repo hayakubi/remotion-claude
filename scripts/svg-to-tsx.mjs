@@ -8,7 +8,7 @@ import { join, basename, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const inDir = join(root, "public", "svg");
+const inDir = join(root, "public", "svg", "animated");
 const outDir = join(root, "src", "svg");
 mkdirSync(outDir, { recursive: true });
 
@@ -98,7 +98,7 @@ for (const file of readdirSync(inDir).filter((f) => f.endsWith(".svg"))) {
     }
   }
 
-  const out = `// File ini dibuat otomatis oleh scripts/svg-to-tsx.mjs dari public/svg/${file}. Jangan diedit manual.
+  const out = `// File ini dibuat otomatis oleh scripts/svg-to-tsx.mjs dari public/svg/animated/${file}. Jangan diedit manual.
 import React from "react";
 
 export const defs = (
