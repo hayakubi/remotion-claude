@@ -5,7 +5,10 @@ import { spawnSync } from "node:child_process";
 import { mkdirSync, writeFileSync } from "node:fs";
 
 const mode = process.argv[2] ?? "solid";
-const ids = ["Hourglass", "NewYearCap", "NewYearDrink", "NewYearGift"];
+const ids = [
+  "Hourglass", "NewYearCap", "NewYearDrink", "NewYearGift",
+  "NewYearHat", "NewYearMask", "NewYearStar", "StarGlasses",
+];
 
 mkdirSync("out", { recursive: true });
 writeFileSync("out/alpha-props.json", JSON.stringify({ background: "transparent" }));

@@ -28,3 +28,9 @@ export const rand = (i: number, salt = 0): number => {
 
 export const clamp01 = (v: number): number => Math.min(1, Math.max(0, v));
 export const lerp = (a: number, b: number, t: number): number => a + (b - a) * t;
+
+/** Kedipan 0..1 (halus), `rate` siklus per loop dengan geseran fase `offset`. */
+export const twinkle = (u: number, rate: number, offset = 0): number => {
+  const s = 0.5 + 0.5 * Math.sin(TAU * (rate * u + offset));
+  return s * s;
+};
