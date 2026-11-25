@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "remotion studio",
     "build": "remotion bundle",
-    "render": "remotion render HelloWorld out/HelloWorld.mp4",
+    "svg:generate": "node scripts/svg-to-tsx.mjs",
+    "render:solid": "node scripts/render-all.mjs solid",
+    "render:alpha": "node scripts/render-all.mjs alpha",
     "upgrade": "remotion upgrade"
   },
   "dependencies": {
