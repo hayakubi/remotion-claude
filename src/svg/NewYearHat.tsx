@@ -77,3 +77,43 @@ export const clipClass = {
   lidahTopi: "newyearhat-2",
   bodyTopi: "newyearhat-6",
 };
+
+/** Elemen ber-id yang bersarang di dalam bagian tingkat-atas. */
+export const nested = {
+  baseLidah: (
+    <path id="base-lidah" className="newyearhat-3" d="M48.16,661.86C90.23,485.47,962.6,582.44,923.33,803.07S-14.86,926.18,48.16,661.86Z" />
+  ),
+  shadow1: (
+    <path id="shadow-1" className="newyearhat-4" d="M153.56,570.65s32.94,69.18,91.93,114.93l65.12-142.35S209.89,531.94,153.56,570.65Z" />
+  ),
+  shadow2: (
+    <path id="shadow-2" className="newyearhat-4" d="M539,781.78s345.11,47.66,398.84-50.5S774.54,600.06,663,602.13,539,781.78,539,781.78Z" />
+  ),
+  highlight: (
+    <path id="highlight" className="newyearhat-5" d="M790.37,846.34A645,645,0,0,1,661.2,881.62c-18.33,3-10.55,30.9,7.69,27.9a644.5,644.5,0,0,0,129.17-35.29C815.23,867.57,807.77,839.58,790.37,846.34Z" />
+  ),
+  shadow3: (
+    <path id="shadow-3" className="newyearhat-4" d="M924.31,781.78S883.22,930.7,484.81,896.6,48.16,661.86,48.16,661.86,3.73,723,36.8,801.54s304.81,226.29,594.12,182.89S948,844.68,924.31,781.78Z" />
+  ),
+  baseBody: (
+    <path id="base-body" className="newyearhat-7" d="M241.38,213.62c-13.43,54.76,1,467.55,1,467.55s40.29,70.52,213.11,94.54,264.25-31,264.25-31S786.94,461.6,823.11,289.05Z" />
+  ),
+  aksenMerah: (
+    <path id="aksen-merah" className="newyearhat-8" d="M214.52,536S287.88,620.72,477,645.52s325.47-50.63,325.47-50.63L747.68,768.48s-130.19,56.83-319.28,24.8S197,674.45,197,674.45Z" />
+  ),
+  bintang: (
+    <path id="bintang" className="newyearhat-9" d="M492.72,440.16c20.15,0,29.06,65.87,32.55,68.2s67,10.85,67.42,30.22-48.43,39.52-50,44.17,13.56,73.23,0,78.66S485.36,621.5,474.9,618,428,642.42,407.48,638.55s8.52-64.71,8.52-71.3S370.28,520.76,380.36,501s59.67,3.48,67-4.65S472.57,440.2,492.72,440.16Z" />
+  ),
+};
+
+/** Anak tanpa id dari grup (mis. kumpulan percikan), diakses lewat indeks. */
+export const kids = {
+  garisHighlight: [
+    (
+      <path className="newyearhat-10" d="M765.2,338.61c-97.1,30.76-293.26,11.7-416.77-30.52" />
+    ),
+    (
+      <path className="newyearhat-10" d="M318.66,296.85a285.85,285.85,0,0,1-40.13-20.18" />
+    ),
+  ],
+};

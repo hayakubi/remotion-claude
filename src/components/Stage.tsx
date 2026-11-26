@@ -2,6 +2,8 @@ import React from "react";
 import { AbsoluteFill } from "remotion";
 
 export type Ground = {
+  /** Posisi x bayangan di koordinat SVG (default 540). */
+  x?: number;
   /** Posisi y bayangan di koordinat SVG (viewBox 1080x1080). */
   y: number;
   /** Lebar bayangan di koordinat SVG. */
@@ -48,7 +50,7 @@ export const Stage: React.FC<StageProps> = ({
         </defs>
         {ground ? (
           <ellipse
-            cx={540}
+            cx={ground.x ?? 540}
             cy={ground.y}
             rx={(ground.width * scale) / 2}
             ry={(ground.width * scale) / 2 * 0.1}

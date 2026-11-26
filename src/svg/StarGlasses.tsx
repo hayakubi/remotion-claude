@@ -78,3 +78,13 @@ export const clipClass = {
   frameKanan: "starglasses-3",
   frameKiri: "starglasses-8",
 };
+
+/** Elemen ber-id yang bersarang di dalam bagian tingkat-atas. */
+export const nested = {
+
+};
+
+/** Anak tanpa id dari grup (mis. kumpulan percikan), diakses lewat indeks. */
+export const kids = {
+
+};

@@ -105,3 +105,42 @@ export const clipClass = {
   topi: "newyearstar-5",
   mulut: "newyearstar-11",
 };
+
+/** Elemen ber-id yang bersarang di dalam bagian tingkat-atas. */
+export const nested = {
+  baseBintang: (
+    <path id="base-bintang" className="newyearstar-3" d="M409.12,457.41c3.65-6.17,120.11-234,238.32-192.84,81.67,28.47,87.67,209.37,95.94,214s199.27,29.39,206.61,90S818.68,747.59,809.49,751.26s42.24,195.6-20.2,236-226.82-74.38-246.1-79.89S378.82,1009.3,298.92,970.73s.92-221.3,0-237.83S159.34,608.93,179.55,529,401.7,469.94,409.12,457.41Z" />
+  ),
+  shadowKanan: (
+    <path id="shadow-kanan" className="newyearstar-4" d="M917.48,530.57s27.94,20.19,11.39,70.09-119.38,150.6-119.38,150.6,91.29-18.36,124.62-71.62S1010.77,537.61,917.48,530.57Z" />
+  ),
+  shadowAtas: (
+    <path id="shadow-atas" className="newyearstar-4" d="M481.6,347.7s54.69,106,256.49,109.67c0,0,37.18-167.51-83.91-201.73S481.6,347.7,481.6,347.7Z" />
+  ),
+  shadowKakiKanan: (
+    <path id="shadow-kaki-kanan" className="newyearstar-4" d="M818.16,841.22s7.86,101-46.32,120.33-156.18-14.44-156.18-14.44S719.5,1047,794.8,1001,818.16,841.22,818.16,841.22Z" />
+  ),
+  shadowKakiKiri: (
+    <path id="shadow-kaki-kiri" className="newyearstar-4" d="M265,917.34s17.36,78.19,134,30.44,133.15-57.85,144.17-40.41S353.1,1021.24,302.6,1005.63,265,917.34,265,917.34Z" />
+  ),
+  baseTopi: (
+    <path id="base-topi" className="newyearstar-6" d="M490.85,335.28c.57,5.31,19.74,39.49,92.29,71.17s137.28,19,142.79,14.23c10.56-9.18-8.27-230-11.94-239.67s-20.2-27.55-34.89-28.93-33.06,6-38.57,11S489.47,322.42,490.85,335.28Z" />
+  ),
+  garisMerah3: (
+    <path id="garis-merah-3" className="newyearstar-7" d="M575.33,208.1s66.12-7.58,100.55,5.51,53.23,26.17,53.23,26.17l-5.71-79.21s-24.79-22.15-55.78-23.47S575.33,208.1,575.33,208.1Z" />
+  ),
+  garisMerah2: (
+    <path id="garis-merah-2" className="newyearstar-7" d="M531.25,246s67.5-1.38,116.39,8.26,99.92,35.34,99.92,35.34L739.93,339s-78.51-18.59-126-22-142.57-5.51-142.57-5.51Z" />
+  ),
+  garisMerah1: (
+    <path id="garis-merah-1" className="newyearstar-7" d="M747.56,371.32S702.74,383,649,374.77,474.09,339,474.09,339s63.36,79.89,147.38,99.87,163.23,0,163.23,0Z" />
+  ),
+  highlight: (
+    <path id="highlight" className="newyearstar-8" d="M669,123.38c5.09-1.25,26.17,100.56-31.69,151.52S520.23,288,529.87,264.57,629.74,133,669,123.38Z" />
+  ),
+};
+
+/** Anak tanpa id dari grup (mis. kumpulan percikan), diakses lewat indeks. */
+export const kids = {
+
+};

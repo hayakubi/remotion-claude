@@ -14,11 +14,15 @@ Animasi 4K (3840x2160, 30 fps) berbasis [Remotion](https://www.remotion.dev), di
 | `NewYearMask` | 8 dtk | ya | topeng melayang, tiga bulu melambai bergantian, permata di tengah berdenyut |
 | `NewYearStar` | 8 dtk | ya | bintang melompat 2x sambil miring, pom-pom berayun, mulut terbuka di puncak, pipi berdenyut |
 | `StarGlasses` | 8 dtk | ya | kacamata melayang, bintang di lensa bergoyang berlawanan, kilau putih menyapu lensa, percikan berkedip |
+| `FirecrackerCalendar` | 8 dtk | ya | kalender berayun dari paku atas, petasan bergoyang, empat percikan berkedip |
+| `Petasan` | 8 dtk | ya | petasan melompat tiap 2 dtk dan bergetar, sinar api meletus saat mendarat, percikan berkedip |
+| `TripleBaloon` | 8 dtk | ya | tiga balon melayang dan berayun dari simpul pita, tali ikut bergerak, kilau berdenyut |
+| `BaloonFace` | 8 dtk | ya | dua balon berwajah melayang, berkedip bergantian, mulut tertawa, ekor tali dan pita bergoyang |
 
 Semua komposisi punya dua props yang bisa diubah di Studio:
 
 - `background`: nilai CSS (gradasi/warna), atau `transparent` untuk alpha
-- `shadow`: bayangan lembut di bawah objek (`true`/`false`)
+- `shadow`: bayangan lembut di bawah objek yang berdiri di lantai (`true`/`false`). Tidak berpengaruh pada objek yang menggantung atau melayang (kalender, balon, topeng, kacamata tidak punya bayangan lantai)
 
 ## Mulai
 
@@ -41,7 +45,7 @@ Panduan spesifikasi dan strategi microstock ada di [docs/microstock.md](docs/mic
 
 ## Struktur
 
-- `public/svg/animated/` — SVG yang sudah dianimasikan (8 objek: Hourglass, NewYearCap, NewYearDrink, NewYearGift, NewYearHat, NewYearMask, NewYearStar, StarGlasses)
+- `public/svg/animated/` — SVG yang sudah dianimasikan (12 objek, semua yang ada di tabel di atas)
 - `public/svg/pending/` — SVG yang belum dianimasikan (saat ini kosong)
 - `src/svg/` — SVG yang sudah diubah jadi komponen per bagian (dibuat otomatis)
 - `src/animations/` — animasi per objek

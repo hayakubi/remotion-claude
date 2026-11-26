@@ -91,3 +91,23 @@ export const clipClass = {
   bawahGelas: "newyeardrink-12",
   leherGelas: "newyeardrink-15",
 };
+
+/** Elemen ber-id yang bersarang di dalam bagian tingkat-atas. */
+export const nested = {
+
+};
+
+/** Anak tanpa id dari grup (mis. kumpulan percikan), diakses lewat indeks. */
+export const kids = {
+  bodyGelas: [
+    (
+      <path className="newyeardrink-2" d="M282.6,135.26c1.6-22.95,56.93-63.11,163.94-83s176.72,6.51,184.4,20.4,54.78,213.26,71.24,382.59-76.83,262.62-156.4,272.68S358.23,644.7,328.07,504.77,281,158.12,282.6,135.26Z" />
+    ),
+    (
+      <path className="newyeardrink-3" d="M308.43,140.29c.93,10.82,47.56,43.9,156.4,22.41S612.16,102.12,608,86.78c-4.37-16-91.68-19.36-170.12-5C368.72,94.39,306.93,122.72,308.43,140.29Z" />
+    ),
+    (
+      <path className="newyeardrink-3" d="M311.64,172.76c1.6-4.86,79.11,31.55,171,9.6s123.93-59.91,129.88-58.08S667.42,337.39,672,492,588.77,699.58,549.44,706,407.67,676.71,363.77,537.69,304.71,193.73,311.64,172.76Z" />
+    ),
+  ],
+};

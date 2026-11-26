@@ -47,3 +47,21 @@ export const inner = {
 export const clipClass = {
   bodyTopi: "newyearcap-2",
 };
+
+/** Elemen ber-id yang bersarang di dalam bagian tingkat-atas. */
+export const nested = {
+  baseTopi: (
+    <path id="base-topi" className="newyearcap-3" d="M214.58,799.33,610.47,182.47l49.1,9.72L869.79,861.48S549.09,1052.52,214.58,799.33Z" />
+  ),
+  garisKuningTopi: (
+    <path id="garis-kuning-topi" className="newyearcap-4" d="M317.39,589.11s58.31,118.15,224.8,202.55,338.35,92.07,338.35,92.07l15.34-73.66S731.69,797.8,561.37,696.52s-197.95-182.6-197.95-182.6L432.47,408s15.35,82.86,194.88,187.21S869.79,668.9,869.79,668.9L829.9,575.3s-58,9-208.69-82.86S467.76,308.3,467.76,308.3l46-81.33S601.26,385,767,432.59L705.61,162.53,529.14,136.44S311.25,510.85,317.39,589.11Z" />
+  ),
+  shadowTopi: (
+    <path id="shadow-topi" className="newyearcap-5" d="M787.43,336.47s-119.92,39.34-191.72-6.78A124.38,124.38,0,0,1,556.09,335l-320,498.1L188.5,800.88,500.71,315.56,515.22,293l85-122.31,144.27,21.49Z" />
+  ),
+};
+
+/** Anak tanpa id dari grup (mis. kumpulan percikan), diakses lewat indeks. */
+export const kids = {
+
+};

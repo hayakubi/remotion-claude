@@ -8,6 +8,7 @@ const mode = process.argv[2] ?? "solid";
 const ids = [
   "Hourglass", "NewYearCap", "NewYearDrink", "NewYearGift",
   "NewYearHat", "NewYearMask", "NewYearStar", "StarGlasses",
+  "FirecrackerCalendar", "Petasan", "TripleBaloon", "BaloonFace",
 ];
 
 mkdirSync("out", { recursive: true });

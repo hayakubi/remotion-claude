@@ -34,3 +34,9 @@ export const twinkle = (u: number, rate: number, offset = 0): number => {
   const s = 0.5 + 0.5 * Math.sin(TAU * (rate * u + offset));
   return s * s;
 };
+
+/** Kedip mata: nilai 0..1, singkat sebanyak `times` kali per loop. */
+export const blink = (u: number, times: number, phase = 0, width = 0.06): number => {
+  const p = (((times * u + phase) % 1) + 1) % 1;
+  return p < width ? Math.sin((Math.PI * p) / width) : 0;
+};

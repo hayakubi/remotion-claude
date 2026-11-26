@@ -95,3 +95,13 @@ export const clipClass = {
   buluKuningKiri: "newyearmask-7",
   buluMerah: "newyearmask-10",
 };
+
+/** Elemen ber-id yang bersarang di dalam bagian tingkat-atas. */
+export const nested = {
+
+};
+
+/** Anak tanpa id dari grup (mis. kumpulan percikan), diakses lewat indeks. */
+export const kids = {
+
+};

@@ -1,5 +1,9 @@
 import React from "react";
 import { Composition } from "remotion";
+import { BaloonFace } from "./animations/BaloonFace";
+import { FirecrackerCalendar } from "./animations/FirecrackerCalendar";
+import { Petasan } from "./animations/Petasan";
+import { TripleBaloon } from "./animations/TripleBaloon";
 import { Hourglass } from "./animations/Hourglass";
 import { NewYearCap } from "./animations/NewYearCap";
 import { NewYearDrink } from "./animations/NewYearDrink";
@@ -86,6 +90,42 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="StarGlasses"
         component={StarGlasses}
+        durationInFrames={240} // 8 detik, loop
+        fps={FPS}
+        width={WIDTH}
+        height={HEIGHT}
+        defaultProps={defaultProps}
+      />
+      <Composition
+        id="BaloonFace"
+        component={BaloonFace}
+        durationInFrames={240} // 8 detik, loop
+        fps={FPS}
+        width={WIDTH}
+        height={HEIGHT}
+        defaultProps={defaultProps}
+      />
+      <Composition
+        id="FirecrackerCalendar"
+        component={FirecrackerCalendar}
+        durationInFrames={240} // 8 detik, loop
+        fps={FPS}
+        width={WIDTH}
+        height={HEIGHT}
+        defaultProps={defaultProps}
+      />
+      <Composition
+        id="Petasan"
+        component={Petasan}
+        durationInFrames={240} // 8 detik, loop
+        fps={FPS}
+        width={WIDTH}
+        height={HEIGHT}
+        defaultProps={defaultProps}
+      />
+      <Composition
+        id="TripleBaloon"
+        component={TripleBaloon}
         durationInFrames={240} // 8 detik, loop
         fps={FPS}
         width={WIDTH}

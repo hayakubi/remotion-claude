@@ -98,6 +98,33 @@ for (const file of readdirSync(inDir).filter((f) => f.endsWith(".svg"))) {
     }
   }
 
+  // Elemen ber-id yang bersarang, dan "anak tanpa id" dari grup (mis. kumpulan percikan).
+  const used = new Set(parts.map((p) => camel(attrOf(p, "id"))));
+  const nestedNodes = [];
+  const collect = (node) => {
+    for (const c of node.children.filter((x) => x.tag)) {
+      if (attrOf(c, "id")) nestedNodes.push(c);
+      collect(c);
+    }
+  };
+  parts.forEach(collect);
+  const nestedLines = [];
+  const kidsLines = [];
+  const addKids = (node, key) => {
+    const els = node.children.filter((x) => x.tag && x.tag !== "title");
+    if (els.length >= 2 && els.every((c) => !attrOf(c, "id") && c.tag !== "g")) {
+      kidsLines.push(`  ${key}: [\n${els.map((c) => `    (\n${ser(c, "      ")}\n    ),`).join("\n")}\n  ],`);
+    }
+  };
+  parts.forEach((p) => addKids(p, camel(attrOf(p, "id"))));
+  for (const n of nestedNodes) {
+    let key = camel(attrOf(n, "id"));
+    for (let i = 2; used.has(key); i++) key = camel(attrOf(n, "id")) + i;
+    used.add(key);
+    nestedLines.push(`  ${key}: (\n${ser(n, "    ")}\n  ),`);
+    addKids(n, key);
+  }
+
   const out = `// File ini dibuat otomatis oleh scripts/svg-to-tsx.mjs dari public/svg/animated/${file}. Jangan diedit manual.
 import React from "react";
 
@@ -118,6 +145,16 @@ ${innerLines.join("\n")}
 /** Nama class yang memberi clip-path pada pembungkus di atas. */
 export const clipClass = {
 ${clipLines.join("\n")}
+};
+
+/** Elemen ber-id yang bersarang di dalam bagian tingkat-atas. */
+export const nested = {
+${nestedLines.join("\n")}
+};
+
+/** Anak tanpa id dari grup (mis. kumpulan percikan), diakses lewat indeks. */
+export const kids = {
+${kidsLines.join("\n")}
 };
 `;
   writeFileSync(join(outDir, `${name}.tsx`), out);
