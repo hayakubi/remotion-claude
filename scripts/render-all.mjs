@@ -12,7 +12,8 @@ const ids = [
 ];
 
 mkdirSync("out", { recursive: true });
-writeFileSync("out/alpha-props.json", JSON.stringify({ background: "transparent" }));
+// Alpha: latar transparan dan tanpa bayangan lantai.
+writeFileSync("out/alpha-props.json", JSON.stringify({ background: "transparent", shadow: false }));
 
 for (const id of ids) {
   const args =
