@@ -22,7 +22,7 @@ Animasi 4K (3840x2160, 30 fps) berbasis [Remotion](https://www.remotion.dev), di
 Semua komposisi punya dua props yang bisa diubah di Studio:
 
 - `background`: nilai CSS (gradasi/warna), atau `transparent` untuk alpha
-- `shadow`: bayangan lembut di bawah objek yang berdiri di lantai (`true`/`false`). Tidak berpengaruh pada objek yang menggantung atau melayang (kalender, balon, topeng, kacamata tidak punya bayangan lantai)
+- `shadow`: bayangan lembut di bawah objek yang berdiri di lantai (`true`/`false`). Tidak berpengaruh pada `FirecrackerCalendar`, `TripleBaloon`, dan `BaloonFace` karena ketiganya menggantung atau melayang
 
 ## Mulai
 
